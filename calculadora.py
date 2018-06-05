@@ -16,6 +16,9 @@ variables = {}
 def make_parser(lexer):
     parser = ox.make_parser([
         ("module : expr", identity),
+        ("expr : atom", identity),
+        ("atom : number", identity),
+        ("number : NUMBER", float),
         # ...
     ])
     return lambda src: parser(lexer(src))
