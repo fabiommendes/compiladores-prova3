@@ -22,14 +22,25 @@ relativos. O erro deve ser inserido dentro de parênteses logo após o número::
 Também deve ser possível atribuir variáveis e utilizá-las em expressões::
 
   pi = 3.14
-  y = pi * 4.0 
+  y = pi * 4.0
+
+O parser deve aceitar as quatro operações, agrupamento com parênteses e 
+operadores unários::
+
+  1 + 1
+  2 - 1
+  3 * 2
+  6 / 2
+  2 * (3 + 4)
+  +42
+  -42
 
 
 Rodando os testes
 -----------------
 
 Rode os testes com ``pytest tests.py``. A nota é o número de testes 
-que passaram - 1.
+que passaram - 2.
 
 Dicas
 .....
@@ -43,4 +54,4 @@ Iniciar shell interativo:
 Instalar dependências:
   ``pip3 install ox-parser pytest --user -U``
 
-Atenção: Não funciona em Python 3.5.
+**Atenção:** Não funciona em Python 3.5.
